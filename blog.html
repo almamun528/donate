@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- TailWindCss CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-yellow-50">
+      <nav
+        class="p-4 md:flex md:justify-between md:items-center md:py-4 md:w-10/12 mx-auto"
+      >
+        <!-- !Blog Button -->
+        <button
+          id="btn-blog"
+          class="bg-lime-300 px-5 py-2 rounded-lg font-semibold hidden"
+        >
+          Blog
+        </button>
+
+        <!-- !home button -->
+        <button
+          id="btn-home"
+          class="bg-lime-300 px-5 py-2 rounded-lg font-semibold"
+        >
+          Home
+        </button>
+        <!-- !Donate Logo -->
+        <span class="flex items-center my-2 md:my-0 font-semibold"
+          ><img class="mr-3 w-10" src="./assets/logo.png" alt="" />
+          Donate Bangladesh
+        </span>
+        <!-- !Account Balance -->
+        <span class="flex items-center"
+          ><img class="mr-3 w-10" src="./assets/coin.png" alt="" />
+          <!-- !main Balance -->
+          <span id="main-balance">92300</span> <span class="ml-2"> BDT</span>
+        </span>
+      </nav>
+    </header>
+    <br>
+    <h1 class="text-center font-bold text-6xl">FAQ</h1>
+    <br />
+    <!-- !FAQ Section Starts -->
+    <section class="m-4 md:m-0 md:w-9/12 md:mx-auto">
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          1. What is the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The DOM (Document Object Model) is a programming interface for web
+            documents. It represents the structure of a document as a tree of
+            objects, where each node is an element, attribute, or text from the
+            HTML or XML document. JavaScript can be used to interact with and
+            manipulate these nodes.
+          </p>
+        </div>
+      </div> <br>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          2. How is the DOM different from HTML?
+        </div>
+        <div class="collapse-content">
+          <p>
+            HTML is the markup language used to structure web content, while the
+            DOM is an object-based representation of that HTML content in the
+            browser. When a web page loads, the browser converts HTML into the
+            DOM, making it accessible and modifiable using JavaScript.
+          </p>
+        </div>
+      </div> <br>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          3. What are DOM elements and nodes?
+        </div>
+        <div class="collapse-content">
+          <p>
+            DOM elements represent HTML tags (like div, p, a), while DOM nodes
+            are the general term for all items in the DOM tree, which includes
+            elements, text, attributes, and comments. Every element is a node,
+            but not every node is an element.
+          </p>
+        </div>
+      </div> <br>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          4.What is event delegation in the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique in JavaScript where you add a single
+            event listener to a parent element instead of adding listeners to
+            individual child elements. The event listener can capture events
+            from child elements due to event bubbling. This improves performance
+            when dealing with large numbers of elements.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
