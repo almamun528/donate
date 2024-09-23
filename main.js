@@ -72,7 +72,6 @@ document.getElementById("btn-donate").addEventListener("click", function () {
   );
 });
 
-
 // !Donate for Flood at Noakhali, Bangladesh Item 1
 document
   .getElementById("donate-now-btn-nuakhali")
@@ -85,8 +84,8 @@ document
       alert("you don't have sufficient balance for donating");
       return;
     }
-    if( addMoney <=0 ){
-      alert('Negative value is not accepted');
+    if (addMoney <= 0) {
+      alert("Negative value is not accepted");
       return;
     }
 
@@ -104,11 +103,13 @@ document
     const totalDonationGetNuakhali = addMoney + getMoney;
     document.getElementById("donation-balance-Nuakhali-has").innerText =
       totalDonationGetNuakhali;
-      //!pop up Button added
-     document.getElementById('popup').classList.remove('hidden')
-    document.getElementById('close-confirmation').addEventListener('click' , function(){
-      document.getElementById('popup').classList.add('hidden')
-    })
+    //!pop up Button added
+    document.getElementById("popup").classList.remove("hidden");
+    document
+      .getElementById("close-confirmation")
+      .addEventListener("click", function () {
+        document.getElementById("popup").classList.add("hidden");
+      });
     // Transaction section created
     const div = document.createElement("div");
 
@@ -130,8 +131,8 @@ document
       alert("you don't have sufficient balance for donating");
       return;
     }
-    if( inputMoney <=0 ){
-      alert('Negative value is not accepted');
+    if (inputMoney <= 0) {
+      alert("Negative value is not accepted");
       return;
     }
     if (isNaN(inputMoney)) {
@@ -151,11 +152,13 @@ document
     document.getElementById("donation-balance-feni").innerText =
       totalDonationGetFeni;
 
-          //!pop up Button added
-          document.getElementById('popup').classList.remove('hidden')
-          document.getElementById('close-confirmation').addEventListener('click' , function(){
-            document.getElementById('popup').classList.add('hidden')
-          })
+    //!pop up Button added
+    document.getElementById("popup").classList.remove("hidden");
+    document
+      .getElementById("close-confirmation")
+      .addEventListener("click", function () {
+        document.getElementById("popup").classList.add("hidden");
+      });
     // Transaction section created
     const div = document.createElement("div");
 
@@ -177,8 +180,8 @@ document
       alert("you don't have sufficient balance for donating");
       return;
     }
-    if( donateForStudent <=0 ){
-      alert('Negative value is not accepted');
+    if (donateForStudent <= 0) {
+      alert("Negative value is not accepted");
       return;
     }
     if (isNaN(donateForStudent)) {
@@ -197,12 +200,14 @@ document
     const totalDonationStudentHas = donateForStudent + balanceIsNow;
     document.getElementById("donation-has-rightnow").innerText =
       totalDonationStudentHas;
-      
-          //!pop up Button added
-          document.getElementById('popup').classList.remove('hidden')
-          document.getElementById('close-confirmation').addEventListener('click' , function(){
-            document.getElementById('popup').classList.add('hidden')
-          })
+
+    //!pop up Button added
+    document.getElementById("popup").classList.remove("hidden");
+    document
+      .getElementById("close-confirmation")
+      .addEventListener("click", function () {
+        document.getElementById("popup").classList.add("hidden");
+      });
     // Transaction section created
     const div = document.createElement("div");
 
@@ -211,7 +216,3 @@ document
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
-
-
-
-
