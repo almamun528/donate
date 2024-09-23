@@ -4,7 +4,7 @@ document.getElementById("btn-blog").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
 document.getElementById("btn-home").addEventListener("click", function () {
-  window.location.href = "./index.html";
+  window.location.href = "https://almamun528.github.io/donate/index.html";
 });
 
 //! History Button and Donation button Toggle
