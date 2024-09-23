@@ -91,3 +91,42 @@ document
             `;
         document.getElementById("transaction-container").appendChild(div);
   });
+
+
+  //!Aid for Injured in the Quota Movement
+
+  document
+  .getElementById("donate-for-student")
+  .addEventListener("click", function () {
+    
+    const donateForStudent = getValueByIdFromInput("donate-feni-input");
+    const donarBalance = donationValueAmount("main-balance");
+
+    if (donateForStudent > donarBalance) {
+      alert("you don't have sufficient balance for donating");
+      return;
+    }
+    if (isNaN(donateForStudent)) {
+      alert("Wrong input this only input accepts only Number");
+      return;
+    }
+
+    //function calculation
+
+    const balanceIsNow = donationValueAmount("donation-has-rightnow");
+
+    const donaterBalanceISNow = donarBalance - donateForStudent;
+
+    document.getElementById("main-balance").innerText = donaterBalanceISNow;
+
+    const totalDonationStudentHas = donateForStudent + balanceIsNow;
+    document.getElementById("donation-has-rightnow").innerText = totalDonationStudentHas
+
+        // Transaction section created
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+                <p class ='p-3'> You donate ${donateForStudent} tk for <span class ="text-red-600 font-bold">Quota Movement</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
+            `;
+        document.getElementById("transaction-container").appendChild(div);
+  });
