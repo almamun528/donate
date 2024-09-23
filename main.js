@@ -8,15 +8,68 @@ document.getElementById("btn-home").addEventListener("click", function () {
 });
 
 //! History Button and Donation button Toggle
-
 document.getElementById("btn-history").addEventListener("click", function () {
-  document.getElementById("history-data").classList.remove("hidden");
-  document.getElementById("card-section").classList.add("hidden");
+  viewHideToggle("history-data");
+  const historyButton = document.getElementById("btn-history");
+  historyButton.classList.add(
+    "bg-lime-400",
+    "px-5",
+    "py-2",
+    "rounded-lg",
+    "font-semibold",
+    "border-2",
+    "border-lime-400"
+  );
+  const donateButton = document.getElementById("btn-donate");
+  donateButton.classList.remove(
+    "bg-lime-400",
+    "px-5",
+    "py-2",
+    "rounded-lg",
+    "font-semibold",
+    "border-2",
+    "border-lime-400"
+  );
+  donateButton.classList.add(
+    "border-2",
+    "px-5",
+    "py-2",
+    "rounded-lg",
+    "font-semibold"
+  );
 });
 
 document.getElementById("btn-donate").addEventListener("click", function () {
-  document.getElementById("history-data").classList.add("hidden");
-  document.getElementById("card-section").classList.remove("hidden");
+  viewHideToggle("card-section");
+
+  const historyButton = document.getElementById("btn-history");
+  const donateButton = document.getElementById("btn-donate");
+
+  historyButton.classList.remove(
+    "bg-lime-400",
+    "px-5",
+    "py-2",
+    "rounded-lg",
+    "font-semibold",
+    "border-2",
+    "border-lime-400"
+  );
+  historyButton.classList.add(
+    "border-2",
+    "px-5",
+    "py-2",
+    "rounded-lg",
+    "font-semibold"
+  );
+  donateButton.classList.add(
+    "bg-lime-400",
+    "px-5",
+    "py-2",
+    "rounded-lg",
+    "font-semibold",
+    "border-2",
+    "border-lime-400"
+  );
 });
 
 // !Donate for Flood at Noakhali, Bangladesh Item 1
@@ -81,24 +134,23 @@ document
     document.getElementById("main-balance").innerText = donaterBalanceISNow;
 
     const totalDonationGetFeni = inputMoney + feniHasBalance;
-    document.getElementById("donation-balance-feni").innerText = totalDonationGetFeni
+    document.getElementById("donation-balance-feni").innerText =
+      totalDonationGetFeni;
 
-        // Transaction section created
-        const div = document.createElement("div");
+    // Transaction section created
+    const div = document.createElement("div");
 
-        div.innerHTML = `
+    div.innerHTML = `
                 <p class ='p-3'> You donate ${inputMoney} tk for <span class ="text-blue-500 font-semibold">Feni</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
             `;
-        document.getElementById("transaction-container").appendChild(div);
+    document.getElementById("transaction-container").appendChild(div);
   });
 
+//!Aid for Injured in the Quota Movement
 
-  //!Aid for Injured in the Quota Movement
-
-  document
+document
   .getElementById("donate-for-student")
   .addEventListener("click", function () {
-    
     const donateForStudent = getValueByIdFromInput("donate-feni-input");
     const donarBalance = donationValueAmount("main-balance");
 
@@ -120,13 +172,14 @@ document
     document.getElementById("main-balance").innerText = donaterBalanceISNow;
 
     const totalDonationStudentHas = donateForStudent + balanceIsNow;
-    document.getElementById("donation-has-rightnow").innerText = totalDonationStudentHas
+    document.getElementById("donation-has-rightnow").innerText =
+      totalDonationStudentHas;
 
-        // Transaction section created
-        const div = document.createElement("div");
+    // Transaction section created
+    const div = document.createElement("div");
 
-        div.innerHTML = `
+    div.innerHTML = `
                 <p class ='p-3'> You donate ${donateForStudent} tk for <span class ="text-red-600 font-bold">Quota Movement</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
             `;
-        document.getElementById("transaction-container").appendChild(div);
+    document.getElementById("transaction-container").appendChild(div);
   });
