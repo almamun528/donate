@@ -3,9 +3,9 @@
 document.getElementById("btn-blog").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
-// document.getElementById("btn-home").addEventListener("click", function () {
-//   window.location.href = "";
-// });
+document.getElementById("btn-home").addEventListener("click", function () {
+  window.location.href = "./index.html";
+});
 
 //! History Button and Donation button Toggle
 document.getElementById("btn-history").addEventListener("click", function () {
