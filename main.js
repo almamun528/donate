@@ -104,7 +104,11 @@ document
     const totalDonationGetNuakhali = addMoney + getMoney;
     document.getElementById("donation-balance-Nuakhali-has").innerText =
       totalDonationGetNuakhali;
-
+      //!pop up Button added
+     document.getElementById('popup').classList.remove('hidden')
+    document.getElementById('close-confirmation').addEventListener('click' , function(){
+      document.getElementById('popup').classList.add('hidden')
+    })
     // Transaction section created
     const div = document.createElement("div");
 
@@ -147,6 +151,11 @@ document
     document.getElementById("donation-balance-feni").innerText =
       totalDonationGetFeni;
 
+          //!pop up Button added
+          document.getElementById('popup').classList.remove('hidden')
+          document.getElementById('close-confirmation').addEventListener('click' , function(){
+            document.getElementById('popup').classList.add('hidden')
+          })
     // Transaction section created
     const div = document.createElement("div");
 
@@ -188,7 +197,12 @@ document
     const totalDonationStudentHas = donateForStudent + balanceIsNow;
     document.getElementById("donation-has-rightnow").innerText =
       totalDonationStudentHas;
-
+      
+          //!pop up Button added
+          document.getElementById('popup').classList.remove('hidden')
+          document.getElementById('close-confirmation').addEventListener('click' , function(){
+            document.getElementById('popup').classList.add('hidden')
+          })
     // Transaction section created
     const div = document.createElement("div");
 
