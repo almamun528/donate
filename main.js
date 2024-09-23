@@ -72,6 +72,7 @@ document.getElementById("btn-donate").addEventListener("click", function () {
   );
 });
 
+
 // !Donate for Flood at Noakhali, Bangladesh Item 1
 document
   .getElementById("donate-now-btn-nuakhali")
@@ -84,8 +85,13 @@ document
       alert("you don't have sufficient balance for donating");
       return;
     }
+    if( addMoney <=0 ){
+      alert('Negative value is not accepted');
+      return;
+    }
+
     if (isNaN(addMoney)) {
-      alert("Wrong input this only input accepts only Number");
+      alert("Wrong!Input accepts only Valid Number");
       return;
     }
 
@@ -120,8 +126,12 @@ document
       alert("you don't have sufficient balance for donating");
       return;
     }
+    if( inputMoney <=0 ){
+      alert('Negative value is not accepted');
+      return;
+    }
     if (isNaN(inputMoney)) {
-      alert("Wrong input this only input accepts only Number");
+      alert("Wrong!Input accepts only Valid Number");
       return;
     }
 
@@ -151,15 +161,19 @@ document
 document
   .getElementById("donate-for-student")
   .addEventListener("click", function () {
-    const donateForStudent = getValueByIdFromInput("donate-feni-input");
+    const donateForStudent = getValueByIdFromInput("donate-amount-input");
     const donarBalance = donationValueAmount("main-balance");
 
     if (donateForStudent > donarBalance) {
       alert("you don't have sufficient balance for donating");
       return;
     }
+    if( donateForStudent <=0 ){
+      alert('Negative value is not accepted');
+      return;
+    }
     if (isNaN(donateForStudent)) {
-      alert("Wrong input this only input accepts only Number");
+      alert("Wrong!Input accepts only Valid Number");
       return;
     }
 
@@ -183,3 +197,7 @@ document
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
+
+
+
+
