@@ -3,8 +3,11 @@
 document.getElementById("btn-blog").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
+// document.getElementById("btn-home").addEventListener("click", function () {
+//   window.location.href = "./index.html";
+// });
 document.getElementById("btn-home").addEventListener("click", function () {
-  window.location.href = "./index.html";
+  window.location.href = "/donate/";
 });
 
 //! History Button and Donation button Toggle
@@ -115,6 +118,7 @@ document
 
     div.innerHTML = `
             <p class ='p-3'> You donate ${addMoney} tk for <span class ="text-green-500 font-semibold"> Nuakhaki</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
+        
         `;
     document.getElementById("transaction-container").appendChild(div);
   });
