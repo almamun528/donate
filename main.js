@@ -6,9 +6,7 @@ document.getElementById("btn-blog").addEventListener("click", function () {
 // document.getElementById("btn-home").addEventListener("click", function () {
 //   window.location.href = "./index.html";
 // });
-document.getElementById("btn-home").addEventListener("click", function () {
-  window.location.href = "https://almamun528.github.io/donate/";
-});
+
 
 //! History Button and Donation button Toggle
 document.getElementById("btn-history").addEventListener("click", function () {
