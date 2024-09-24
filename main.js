@@ -106,9 +106,7 @@ document
       totalDonationGetNuakhali;
     //!pop up Button added
     document.getElementById("popup").classList.remove("hidden");
-    document
-      .getElementById("close-confirmation")
-      .addEventListener("click", function () {
+    document.getElementById("close-confirmation").addEventListener("click", function () {
         document.getElementById("popup").classList.add("hidden");
       });
     // Transaction section created
@@ -116,6 +114,7 @@ document
 
     div.innerHTML = `
             <p class ='p-3'> You donate ${addMoney} tk for <span class ="text-green-500 font-semibold"> Nuakhaki</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
+            <p class ="text-xs bg-gray-100 p-3 opacity-80 rounded-lg">Date: ${new Date()}</p>
         `;
     document.getElementById("transaction-container").appendChild(div);
   });
@@ -165,6 +164,7 @@ document
 
     div.innerHTML = `
                 <p class ='p-3'> You donate ${inputMoney} tk for <span class ="text-blue-500 font-semibold">Feni</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
+                 <p class ="text-xs bg-gray-100 p-3 opacity-80 rounded-lg">Date: ${new Date()}</p>
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
@@ -214,6 +214,7 @@ document
 
     div.innerHTML = `
                 <p class ='p-3'> You donate ${donateForStudent} tk for <span class ="text-red-600 font-bold">Quota Movement</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
+                 <p class ="text-xs bg-gray-100 p-3 opacity-80 rounded-lg">Date: ${new Date()}</p>
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
