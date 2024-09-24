@@ -116,7 +116,6 @@ document
 
     div.innerHTML = `
             <p class ='p-3'> You donate ${addMoney} tk for <span class ="text-green-500 font-semibold"> Nuakhaki</span>, Transaction date is ${new Date().toLocaleDateString()}</p>
-        
         `;
     document.getElementById("transaction-container").appendChild(div);
   });
